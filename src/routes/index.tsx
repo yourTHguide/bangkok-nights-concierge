@@ -12,17 +12,17 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Best Nightlife Thailand — Bangkok Nightlife, Mastered." },
+      { title: "Best Nightlife Thailand — Bangkok Nightlife. Unlocked." },
       {
         name: "description",
         content:
-          "Bespoke private productions, elite venue access, and curated high-concept nightlife experiences in Bangkok and Pattaya.",
+          "Bespoke private parties, luxury yacht charters, and exclusive club access in Bangkok and Pattaya. Designed perfectly around you.",
       },
     ],
     links: [
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap",
       },
     ],
   }),
@@ -34,21 +34,18 @@ function Index() {
   return (
     <main className="bg-background text-foreground relative overflow-x-hidden">
       {/* Nav */}
-      <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-md bg-background/40 border-b border-white/5">
+      <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-xl bg-background/50 border-b border-white/5">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-          <a href="#top" className="font-display tracking-[0.2em] text-sm sm:text-base text-foreground">
-            BEST NIGHTLIFE <span className="text-gold">THAILAND</span>
+          <a href="#top" className="font-sans font-semibold tracking-[0.22em] text-[12px] sm:text-[13px] text-white">
+            BEST NIGHTLIFE <span className="text-neon-gradient">THAILAND</span>
           </a>
-          <nav className="hidden md:flex items-center gap-8 micro-caps text-muted-foreground">
-            <a href="#productions" className="hover:text-gold transition">Productions</a>
-            <a href="#pillars" className="hover:text-gold transition">Pillars</a>
-            <a href="#experiences" className="hover:text-gold transition">Experiences</a>
+          <nav className="hidden md:flex items-center gap-9 micro-caps text-white/60">
+            <a href="#productions" className="hover:text-white transition">Events</a>
+            <a href="#pillars" className="hover:text-white transition">Method</a>
+            <a href="#experiences" className="hover:text-white transition">Experiences</a>
           </nav>
-          <a
-            href="#experiences"
-            className="hidden sm:inline-flex items-center rounded-full border border-gold/50 text-gold micro-caps px-4 py-2 hover:bg-gold/10 transition"
-          >
-            Inquire
+          <a href="#experiences" className="btn-neon hidden sm:inline-flex !py-2.5 !px-5 !text-[11px]">
+            <span>Inquire</span>
           </a>
         </div>
       </header>
@@ -63,113 +60,107 @@ function Index() {
             height={1280}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/55 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/55 via-background/65 to-background" />
         </div>
 
-        <div className="orb" style={{ width: 520, height: 520, background: "#1a1a4d", top: "-10%", left: "-8%" }} />
-        <div className="orb" style={{ width: 460, height: 460, background: "#2a0a4d", bottom: "-12%", right: "-6%", animationDelay: "2s" }} />
+        <div className="orb" style={{ width: 620, height: 620, background: "#2F002F", top: "-12%", left: "-10%" }} />
+        <div className="orb" style={{ width: 560, height: 560, background: "#41002A", bottom: "-15%", right: "-8%", animationDelay: "3s" }} />
+        <div className="orb" style={{ width: 380, height: 380, background: "#EA003A", top: "40%", left: "55%", opacity: 0.18, animationDelay: "1.5s" }} />
 
         <div className="relative z-10 text-center max-w-4xl px-6 animate-fade-up">
-          <p className="micro-caps text-gold mb-6">Est. Bangkok · Members & Guests</p>
-          <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl text-white leading-[1.02]">
-            Bangkok Nightlife,
+          <p className="micro-caps text-white/70 mb-7">Bangkok · Pattaya · Private &amp; Members</p>
+          <h1 className="font-display text-[52px] sm:text-7xl lg:text-[104px] text-white leading-[0.98] tracking-tight">
+            Bangkok Nightlife.
             <br />
-            <span className="italic text-gold-gradient">Mastered.</span>
+            <span className="italic text-neon-gradient">Unlocked.</span>
           </h1>
-          <p className="mt-8 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Bespoke private productions, elite venue access, and curated high-concept
-            events for those who demand the exceptional.
+          <p className="mt-8 text-base sm:text-lg text-white/70 max-w-xl mx-auto leading-relaxed">
+            Bespoke private parties, luxury yacht charters, and exclusive club access.
+            Designed perfectly around you.
           </p>
 
-          <a
-            href="#productions"
-            className="mt-14 inline-flex flex-col items-center text-gold group"
-            aria-label="Scroll to productions"
-          >
-            <span className="micro-caps mb-3 opacity-70 group-hover:opacity-100 transition">Enter</span>
-            <span className="block h-12 w-px bg-gradient-to-b from-gold to-transparent" />
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="mt-1 animate-bounce">
-              <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </a>
+          <div className="mt-12 flex justify-center">
+            <a href="#experiences" className="btn-neon">
+              <span>Explore Client Experiences ↓</span>
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* SIGNATURE PRODUCTIONS */}
+      {/* SIGNATURE EVENTS */}
       <section id="productions" className="relative py-28 sm:py-36 px-6">
-        <div className="orb" style={{ width: 400, height: 400, background: "#1a1a4d", top: "20%", right: "-10%" }} />
+        <div className="orb" style={{ width: 480, height: 480, background: "#2F002F", top: "10%", right: "-12%" }} />
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
-            <p className="micro-caps text-gold mb-4">02 — The Culture</p>
-            <h2 className="font-display text-4xl sm:text-6xl text-white leading-tight">
-              Our Signature <span className="italic text-gold-gradient">Productions</span>
+            <p className="micro-caps text-white/55 mb-4">02 — Our Productions</p>
+            <h2 className="font-display text-[40px] sm:text-6xl text-white leading-[1.02] tracking-tight">
+              Signature <span className="italic text-neon-gradient">Events</span>
             </h2>
-            <p className="mt-6 text-muted-foreground text-lg max-w-2xl">
-              We don't just book tables — we design culture. Experience our legendary
-              public productions where the city's elite collective meets.
+            <p className="mt-6 text-white/65 text-lg max-w-xl">
+              We don't just book tables. We create the party. Join our legendary
+              public events in the city.
             </p>
           </div>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-12 gap-6">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-12 gap-5">
             <ProductionCard
-              tag="01 — Flagship"
+              tag="Event 01"
               title="Bangkok Club Crawl"
-              copy="The premium, high-energy benchmark for curated nightlife exploration."
+              copy="The ultimate VIP venue tour."
               img={crawlImg}
-              className="md:col-span-7 md:row-span-2 h-[520px]"
+              className="md:col-span-7 md:row-span-2 h-[540px]"
             />
             <ProductionCard
-              tag="02 — Concept"
+              tag="Event 02"
               title="Bangkok Mob"
-              copy="Immersive, concept-driven pop-up nightlife experiences."
+              copy="Immersive pop-up parties."
               img={mobImg}
-              className="md:col-span-5 h-[250px]"
+              className="md:col-span-5 h-[260px]"
             />
             <ProductionCard
-              tag="03 — Secret Society"
+              tag="Event 03"
               title="Bangkok Masquerade"
-              copy="Our flagship secret society annual gala."
+              copy="Our elite annual secret society gala."
               img={masqueradeImg}
-              className="md:col-span-5 h-[250px]"
+              className="md:col-span-5 h-[260px]"
             />
-          </div>
-
-          <div className="mt-12 flex justify-end">
-            <a href="#experiences" className="micro-caps text-gold border-b border-gold/50 pb-1 hover:border-gold transition">
-              Explore Upcoming Schedules →
-            </a>
           </div>
         </div>
       </section>
 
       {/* PILLARS */}
       <section id="pillars" className="relative py-28 sm:py-36 px-6 border-y border-white/5">
+        <div className="orb" style={{ width: 420, height: 420, background: "#41002A", top: "20%", left: "-10%" }} />
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="micro-caps text-gold mb-4">03 — Credentials</p>
-            <h2 className="font-display text-4xl sm:text-5xl text-white">
-              Built on <span className="italic text-gold-gradient">Three Pillars</span>
+            <p className="micro-caps text-white/55 mb-4">03 — Method</p>
+            <h2 className="font-display text-[40px] sm:text-5xl text-white tracking-tight">
+              Built on <span className="italic text-neon-gradient">Three Pillars</span>
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-px bg-gold/20">
+          <div className="grid md:grid-cols-3 gap-px bg-white/10">
             {[
               {
-                h: "01 / Primed Network",
-                b: "Pre-negotiated minimum spends and preferred table placement at Bangkok's most iconic institutions, including Sing Sing Theater and Levels.",
+                k: "01",
+                h: "The Network",
+                b: "The best VIP tables at Sing Sing, Levels, and top venues — pre-arranged.",
               },
               {
-                h: "02 / Turnkey Production",
-                b: "Complete logistics, sound systems, bespoke venue transformations, and top-tier talent bookings handled seamlessly under our oversight.",
+                k: "02",
+                h: "The Production",
+                b: "DJs, sound systems, lights, and luxury transport handled completely.",
               },
               {
-                h: "03 / Elite Hosting",
-                b: "Executed exclusively by seasoned nightlife directors and dedicated concierges. Complete friction-free access from your doorstep to sunrise.",
+                k: "03",
+                h: "The Hosts",
+                b: "Elite local concierges managing your entire night from start to finish.",
               },
             ].map((p) => (
-              <div key={p.h} className="bg-background p-10">
-                <h3 className="font-display text-2xl text-gold">{p.h}</h3>
-                <p className="mt-5 text-muted-foreground text-sm leading-relaxed">{p.b}</p>
+              <div key={p.k} className="bg-background p-10 sm:p-12">
+                <p className="micro-caps text-neon-gradient mb-5">{p.k} / Pillar</p>
+                <h3 className="font-display text-white text-3xl">{p.h}</h3>
+                <p className="mt-5 text-white/65 text-[15px] leading-relaxed">{p.b}</p>
               </div>
             ))}
           </div>
@@ -177,19 +168,19 @@ function Index() {
       </section>
 
       {/* EXPERIENCE DECK */}
-      <section id="experiences" className="relative py-28 sm:py-36 px-6" style={{ background: "#0D0D0D" }}>
-        <div className="orb" style={{ width: 480, height: 480, background: "#2a0a4d", top: "10%", left: "-12%" }} />
-        <div className="orb" style={{ width: 420, height: 420, background: "#0a1a4d", bottom: "10%", right: "-8%", animationDelay: "3s" }} />
+      <section id="experiences" className="relative py-28 sm:py-36 px-6">
+        <div className="orb" style={{ width: 540, height: 540, background: "#2F002F", top: "10%", left: "-15%" }} />
+        <div className="orb" style={{ width: 460, height: 460, background: "#41002A", bottom: "10%", right: "-10%", animationDelay: "3s" }} />
 
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="micro-caps text-gold mb-4">04 — The Master Deck</p>
-            <h2 className="font-display text-4xl sm:text-6xl text-white leading-tight">
-              The Private <span className="italic text-gold-gradient">Experience</span> Deck
+            <p className="micro-caps text-white/55 mb-4">04 — The Deck</p>
+            <h2 className="font-display text-[40px] sm:text-6xl text-white leading-[1.02] tracking-tight">
+              Client <span className="italic text-neon-gradient">Experiences</span>
             </h2>
-            <p className="mt-6 text-muted-foreground text-lg">
-              Fourteen bespoke experiences. Swipe through the deck — tap any card to
-              open a full briefing and conversational inquiry.
+            <p className="mt-6 text-white/65 text-lg">
+              Fourteen bespoke nights. Tap any card to open a full briefing
+              and chat with us directly on WhatsApp.
             </p>
           </div>
 
@@ -200,10 +191,10 @@ function Index() {
       {/* FOOTER */}
       <footer className="px-6 py-16 border-t border-white/5">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-          <p className="font-display tracking-[0.2em] text-sm">
-            BEST NIGHTLIFE <span className="text-gold">THAILAND</span>
+          <p className="font-sans font-semibold tracking-[0.22em] text-[12px]">
+            BEST NIGHTLIFE <span className="text-neon-gradient">THAILAND</span>
           </p>
-          <p className="text-xs text-muted-foreground">
+          <p className="text-xs text-white/50">
             © {new Date().getFullYear()} — Bangkok · Pattaya · By inquiry only.
           </p>
         </div>
@@ -228,20 +219,25 @@ function ProductionCard({
   className?: string;
 }) {
   return (
-    <article
-      className={`group relative overflow-hidden rounded-2xl border border-white/10 ${className}`}
-    >
+    <article className={`group relative overflow-hidden rounded-[24px] border border-white/10 ${className}`}>
       <img
         src={img}
         alt={title}
         loading="lazy"
-        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.2s] group-hover:scale-[1.05]"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent" />
+      <div
+        className="absolute inset-0 mix-blend-overlay opacity-30 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(circle at 20% 100%, rgba(234,0,58,0.4), transparent 60%)",
+        }}
+      />
       <div className="relative h-full flex flex-col justify-end p-7">
-        <p className="micro-caps text-gold mb-3">{tag}</p>
-        <h3 className="font-display text-white text-2xl sm:text-3xl">{title}</h3>
-        <p className="text-sm text-muted-foreground mt-2 max-w-md">{copy}</p>
+        <p className="micro-caps text-white/70 mb-3">{tag}</p>
+        <h3 className="font-display text-white text-3xl sm:text-[34px] leading-tight">{title}</h3>
+        <p className="text-sm text-white/70 mt-2 max-w-md">{copy}</p>
       </div>
     </article>
   );
