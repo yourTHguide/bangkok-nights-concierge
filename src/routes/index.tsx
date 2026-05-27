@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import heroImg from "@/assets/hero.jpg";
 import crawlImg from "@/assets/prod-crawl.jpg";
@@ -40,6 +40,7 @@ function Index() {
             BEST NIGHTLIFE <span className="text-neon-gradient">THAILAND</span>
           </a>
           <nav className="hidden md:flex items-center gap-9 micro-caps text-white/60">
+            <Link to="/about" className="hover:text-white transition">About</Link>
             <a href="#productions" className="hover:text-white transition">Events</a>
             <a href="#pillars" className="hover:text-white transition">Method</a>
             <a href="#experiences" className="hover:text-white transition">Experiences</a>
