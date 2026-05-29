@@ -107,63 +107,105 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* STORIES GRID */}
+      {/* STORIES — ALTERNATING EDITORIAL SPLIT */}
       <section className="relative py-28 sm:py-36 px-6">
         <div
           className="orb"
-          style={{ width: 440, height: 440, background: "#2F002F", top: "5%", right: "-12%" }}
+          style={{ width: 520, height: 520, background: "#600061", opacity: 0.12, top: "5%", right: "-12%" }}
         />
         <div
           className="orb"
-          style={{ width: 380, height: 380, background: "#41002A", bottom: "10%", left: "-10%", animationDelay: "3s" }}
+          style={{ width: 460, height: 460, background: "#41002A", opacity: 0.12, top: "45%", left: "-12%", animationDelay: "2.5s" }}
+        />
+        <div
+          className="orb"
+          style={{ width: 480, height: 480, background: "#600061", opacity: 0.12, bottom: "5%", right: "-10%", animationDelay: "4s" }}
         />
 
         <div className="max-w-6xl mx-auto">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-20 sm:mb-24">
             <p className="micro-caps text-white/55 mb-4">OUR STORIES &amp; BELIEFS</p>
             <h2 className="font-display text-[36px] sm:text-5xl text-white leading-[1.02] tracking-tight">
               What <span className="italic text-neon-gradient">Drives</span> Us
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="space-y-24 sm:space-y-32">
             {[
               {
                 id: "01",
                 tag: "THE PASSION",
-                sub: "Thailand has everything you want.",
-                body: "Bangkok and Pattaya hold the most electric nightlife on the planet. To us, a perfect night isn't just a table booking—it's an art form. We translate the beautiful chaos of the city into a premium, flawless masterpiece designed around your milestone celebration.",
+                heading: "Thailand has everything you want.",
+                body: "Bangkok, Pattaya, and Phuket hold the most electric nightlife on the planet. To us, a perfect night isn't just a table booking—it's an art form. We translate the beautiful chaos of the city into a premium, flawless masterpiece designed around your milestone celebration.",
+                img: passionImg,
+                reverse: false,
               },
               {
                 id: "02",
                 tag: "THE HEART",
-                sub: "We bring the real Thai hospitality.",
+                heading: "We bring the real Thai hospitality.",
                 body: "True luxury is about how you are made to feel. While our look is modern-minimal and sharp, our service is warm, proactive, and deeply personal. We carry the heart of Thai hospitality in everything we do, ensuring a flawless perimeter from doorstep to sunrise.",
+                img: heartImg,
+                reverse: true,
               },
               {
                 id: "03",
                 tag: "THE REWARD",
-                sub: "Your satisfaction is our only accolade.",
+                heading: "Your satisfaction is our only accolade.",
                 body: "Our team lives the culture. We don't just offer an aesthetic; we live for the late-night glam, the music, and the people. Seeing the absolute fulfillment on our clients' faces when a surprise moment lands perfectly is the ultimate honor.",
+                img: rewardImg,
+                reverse: false,
               },
-            ].map((b) => (
+            ].map((row) => (
               <article
-                key={b.id}
-                className="rounded-[24px] border border-white/8 p-8 sm:p-10"
-                style={{ background: "rgba(255,255,255,0.03)" }}
+                key={row.id}
+                className={`grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-14 lg:gap-20 items-center animate-fade-up ${
+                  row.reverse ? "md:[&>*:first-child]:order-2" : ""
+                }`}
               >
-                <p className="micro-caps text-neon-gradient mb-6">
-                  {b.id} / {b.tag}
-                </p>
-                <h3 className="font-display text-[22px] sm:text-[26px] text-white leading-snug italic mb-5">
-                  <span className="text-neon-gradient">{b.sub}</span>
-                </h3>
-                <p className="text-white/65 text-[15px] leading-relaxed">{b.body}</p>
+                {/* IMAGE */}
+                <div
+                  className="relative w-full overflow-hidden rounded-[24px] border border-white/8"
+                  style={{
+                    aspectRatio: "5 / 7",
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.5)",
+                  }}
+                >
+                  <img
+                    src={row.img}
+                    alt={row.heading}
+                    loading="lazy"
+                    width={736}
+                    height={1024}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                </div>
+
+                {/* TEXT */}
+                <div className="flex flex-col justify-center max-w-lg">
+                  <p
+                    className="font-sans text-[11px] uppercase tracking-[0.22em] font-semibold mb-6"
+                    style={{ color: "#EA003A" }}
+                  >
+                    {row.id} / {row.tag}
+                  </p>
+                  <h3 className="font-display italic font-bold text-[30px] sm:text-[40px] leading-[1.05] tracking-tight mb-7">
+                    <span className="text-neon-gradient">{row.heading}</span>
+                  </h3>
+                  <p
+                    className="font-sans text-[14px] text-white"
+                    style={{ lineHeight: 1.65 }}
+                  >
+                    {row.body}
+                  </p>
+                </div>
               </article>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* TIMELINE */}
       <section className="relative py-28 sm:py-36 px-6 border-y border-white/5">
