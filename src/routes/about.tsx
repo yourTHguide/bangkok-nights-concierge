@@ -1,4 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import passionImg from "@/assets/about-passion.jpg";
+import heartImg from "@/assets/about-heart.jpg";
+import rewardImg from "@/assets/about-reward.jpg";
+
+
 
 const WHATSAPP_LINK = "https://wa.me/66812345678?text=Hi%20Best%20Nightlife%20Thailand%2C%20I%27d%20like%20to%20connect%20with%20a%20director.";
 
