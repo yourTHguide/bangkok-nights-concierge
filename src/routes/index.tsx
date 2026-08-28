@@ -41,6 +41,7 @@ function Index() {
           </a>
           <nav className="hidden md:flex items-center gap-9 micro-caps text-white/60">
             <Link to="/about" className="hover:text-white transition">About</Link>
+            <Link to="/new-in-bangkok" className="hover:text-white transition">New in Bangkok</Link>
             <a href="#productions" className="hover:text-white transition">Events</a>
             <a href="#pillars" className="hover:text-white transition">Method</a>
             <a href="#experiences" className="hover:text-white transition">Experiences</a>
