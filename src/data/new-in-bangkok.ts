@@ -15,7 +15,7 @@ export const newInBangkok = {
   priceEarlyBird: 390,
   currency: "฿",
   bookingUrl:
-    "https://wa.me/66000000000?text=" +
+    "https://wa.me/66660399569?text=" +
     encodeURIComponent("Hi BEST — I'd like to book New in Bangkok this Wednesday."),
 } as const;
 

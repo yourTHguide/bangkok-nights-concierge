@@ -6,7 +6,7 @@ interface Props {
   onClose: () => void;
 }
 
-const WHATSAPP_URL = "https://wa.me/66000000000?text=";
+const WHATSAPP_URL = "https://wa.me/66660399569?text=";
 
 export function BottomSheet({ experience, onClose }: Props) {
   useEffect(() => {
