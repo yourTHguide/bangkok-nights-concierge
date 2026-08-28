@@ -151,6 +151,9 @@ function NewInBangkok() {
             <p className="mt-5 font-display text-xl italic text-neon-gradient">
               Come alone. Come curious.
             </p>
+            <p className="mt-4 text-[15px] leading-relaxed text-white/55">
+              Some people come once. Some come every week. Both are fine.
+            </p>
           </div>
           <Figure
             src={laughing.url}
@@ -372,6 +375,26 @@ function NewInBangkok() {
             <span className="italic text-neon-gradient">You just have to show up.</span>
           </h2>
 
+          {/* quiet social proof */}
+          <div className="mx-auto mt-10 grid max-w-xl gap-4 text-left sm:grid-cols-2">
+            <blockquote className="border-l border-white/15 pl-4">
+              <p className="text-[14px] italic leading-relaxed text-white/65">
+                “I came alone. Left with plans for the rest of the week.”
+              </p>
+              <cite className="mt-2 block text-[11px] uppercase tracking-[0.16em] text-white/40 not-italic">
+                — Solo traveler, first week in Bangkok
+              </cite>
+            </blockquote>
+            <blockquote className="border-l border-white/15 pl-4">
+              <p className="text-[14px] italic leading-relaxed text-white/65">
+                “Didn’t know a single person when I arrived. By venue two, it felt easy.”
+              </p>
+              <cite className="mt-2 block text-[11px] uppercase tracking-[0.16em] text-white/40 not-italic">
+                — Remote worker, Bangkok
+              </cite>
+            </blockquote>
+          </div>
+
           <a
             href={ev.bookingUrl}
             target="_blank"
@@ -380,6 +403,10 @@ function NewInBangkok() {
           >
             <span>Book New in Bangkok</span>
           </a>
+
+          <p className="mt-4 text-[13px] text-white/50">
+            We confirm bookings within the hour, usually faster.
+          </p>
 
           <p className="micro-caps mt-7 text-white/60">
             {ev.weekday}s · {ev.startTime} · {ev.venueCount} venues
