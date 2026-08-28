@@ -459,6 +459,15 @@ function SiteHeader() {
   );
 }
 
+function Meta({ icon, label }: { icon: React.ReactNode; label: string }) {
+  return (
+    <li className="flex items-center gap-2 text-sm text-white/80">
+      <span className="text-crimson">{icon}</span>
+      <span className="font-medium tracking-wide">{label}</span>
+    </li>
+  );
+}
+
 function Section({
   children,
   className = "",
