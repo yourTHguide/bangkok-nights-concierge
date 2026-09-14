@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as NewInBangkokRouteImport } from './routes/new-in-bangkok'
+import { Route as BangkokHalloweenCrawl2026RouteImport } from './routes/bangkok-halloween-crawl-2026'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -18,6 +19,12 @@ const NewInBangkokRoute = NewInBangkokRouteImport.update({
   path: '/new-in-bangkok',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BangkokHalloweenCrawl2026Route =
+  BangkokHalloweenCrawl2026RouteImport.update({
+    id: '/bangkok-halloween-crawl-2026',
+    path: '/bangkok-halloween-crawl-2026',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -32,30 +39,43 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/bangkok-halloween-crawl-2026': typeof BangkokHalloweenCrawl2026Route
   '/new-in-bangkok': typeof NewInBangkokRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/bangkok-halloween-crawl-2026': typeof BangkokHalloweenCrawl2026Route
   '/new-in-bangkok': typeof NewInBangkokRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/bangkok-halloween-crawl-2026': typeof BangkokHalloweenCrawl2026Route
   '/new-in-bangkok': typeof NewInBangkokRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/new-in-bangkok'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/bangkok-halloween-crawl-2026'
+    | '/new-in-bangkok'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/new-in-bangkok'
-  id: '__root__' | '/' | '/about' | '/new-in-bangkok'
+  to: '/' | '/about' | '/bangkok-halloween-crawl-2026' | '/new-in-bangkok'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/bangkok-halloween-crawl-2026'
+    | '/new-in-bangkok'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  BangkokHalloweenCrawl2026Route: typeof BangkokHalloweenCrawl2026Route
   NewInBangkokRoute: typeof NewInBangkokRoute
 }
 
@@ -66,6 +86,13 @@ declare module '@tanstack/react-router' {
       path: '/new-in-bangkok'
       fullPath: '/new-in-bangkok'
       preLoaderRoute: typeof NewInBangkokRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bangkok-halloween-crawl-2026': {
+      id: '/bangkok-halloween-crawl-2026'
+      path: '/bangkok-halloween-crawl-2026'
+      fullPath: '/bangkok-halloween-crawl-2026'
+      preLoaderRoute: typeof BangkokHalloweenCrawl2026RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -88,6 +115,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  BangkokHalloweenCrawl2026Route: BangkokHalloweenCrawl2026Route,
   NewInBangkokRoute: NewInBangkokRoute,
 }
 export const routeTree = rootRouteImport
