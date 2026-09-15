@@ -2,15 +2,18 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ArrowDown, Check, ChevronDown, MapPin, MoveRight } from "lucide-react";
 
-import heroImage from "@/assets/prod-masquerade.jpg";
 import rooftopImage from "@/assets/hero.jpg";
-import crawlImage from "@/assets/prod-crawl.jpg";
 import finaleImage from "@/assets/nib-apt101.jpg.asset.json";
-import cheersImage from "@/assets/nib-cheers.png.asset.json";
-import laughingImage from "@/assets/nib-laughing.png.asset.json";
-import movingImage from "@/assets/nib-soi11.png.asset.json";
-import gamesImage from "@/assets/nib-beerpong.jpg.asset.json";
-import interiorImage from "@/assets/nib-interior.jpeg.asset.json";
+import heroImage from "@/assets/halloween-header.jpg.asset.json";
+import lastHalloweenOne from "@/assets/halloween-last-1.jpg.asset.json";
+import lastHalloweenTwo from "@/assets/halloween-last-2.jpg.asset.json";
+import lastHalloweenThree from "@/assets/halloween-last-3.jpg.asset.json";
+import lastHalloweenFour from "@/assets/halloween-last-4.jpg.asset.json";
+import lastHalloweenFive from "@/assets/halloween-last-5.jpg.asset.json";
+import nightOne from "@/assets/halloween-night-1.jpg.asset.json";
+import nightTwo from "@/assets/halloween-night-2.jpg.asset.json";
+import comeSoloImage from "@/assets/halloween-come-solo.jpg.asset.json";
+import whatsIncludedImage from "@/assets/halloween-whats-included.jpg.asset.json";
 
 const BOKUN_CHECKOUT_URL = "#tickets";
 
@@ -157,13 +160,13 @@ function EventHeader() {
 
 function HeroSection({ ctaRef }: { ctaRef: React.RefObject<HTMLAnchorElement | null> }) {
   return (
-    <section className="relative min-h-[930px] overflow-hidden pt-20 sm:min-h-[960px] lg:h-screen lg:min-h-[820px] lg:max-h-[1040px] lg:pt-0">
-      <div className="absolute inset-x-0 top-0 h-[54%] lg:inset-y-0 lg:left-auto lg:h-auto lg:w-[56%]">
-        <img src={heroImage} alt="Masked guest in a candlelit Bangkok nightlife setting" width={1280} height={1600} fetchPriority="high" className="h-full w-full object-cover object-[50%_35%]" />
+    <section className="relative overflow-hidden pt-[430px] sm:pt-[520px] lg:h-screen lg:min-h-[820px] lg:max-h-[1040px] lg:pt-0">
+      <div className="absolute inset-x-0 top-0 h-[430px] sm:h-[520px] lg:inset-y-0 lg:left-auto lg:h-auto lg:w-[56%]">
+        <img src={heroImage.url} alt="Costumed guests celebrating together at Bangkok Halloween Crawl" width={1920} height={1280} fetchPriority="high" className="h-full w-full object-cover object-center" />
         <div className="absolute inset-0 bg-gradient-to-b from-halloween-bg/10 via-halloween-bg/10 to-halloween-bg lg:bg-gradient-to-r lg:from-halloween-bg lg:via-halloween-bg/20 lg:to-halloween-bg/5" />
       </div>
-      <div className="relative mx-auto flex min-h-[850px] max-w-[1240px] items-end px-5 pb-14 sm:px-6 lg:h-full lg:min-h-0 lg:items-center lg:pb-0">
-        <div className="w-full lg:max-w-[650px] lg:py-28">
+      <div className="relative mx-auto flex max-w-[1240px] px-5 pb-14 sm:px-6 lg:h-full lg:items-center lg:pb-0">
+        <div className="w-full pt-5 lg:max-w-[650px] lg:py-28">
           <p className="mb-5 flex items-center gap-3 text-[10px] font-semibold tracking-[0.24em] text-halloween-muted sm:text-[11px]"><span className="h-px w-9 bg-crimson" />BEST NIGHTLIFE THAILAND PRESENTS</p>
           <h1 className="font-display text-[48px] leading-[0.88] text-halloween-ivory sm:text-[62px] lg:text-[92px] xl:text-[104px]">
             BANGKOK<br />HALLOWEEN<br /><span className="italic text-crimson">CRAWL</span> 2026
@@ -204,11 +207,11 @@ function SocialProofGallery() {
         <p className="mt-7 text-[11px] font-semibold tracking-[0.13em] text-halloween-ivory">See what last Halloween looked like ↓</p>
       </div>
       <div className="relative grid h-[560px] grid-cols-12 grid-rows-12 gap-2 sm:h-[680px] lg:h-[610px]">
-        <GalleryImage src={cheersImage.url} alt="Guests laughing together over drinks" className="col-span-8 row-span-7" />
-        <GalleryImage src={movingImage.url} alt="Group moving together through Bangkok at night" className="col-span-4 row-span-5" />
-        <GalleryImage src={gamesImage.url} alt="Guests playing a social nightlife game" className="col-span-4 row-span-7" />
-        <GalleryImage src={crawlImage} alt="Guests talking at a hosted Bangkok nightlife event" className="col-span-5 row-span-5" />
-        <GalleryImage src={finaleImage.url} alt="Crowd under red light at the final party stop" className="col-span-3 row-span-5" />
+        <GalleryImage src={lastHalloweenOne.url} alt="Halloween guests smiling together in Bangkok" className="col-span-8 row-span-7" />
+        <GalleryImage src={lastHalloweenTwo.url} alt="Costumed guests seated together at the event" className="col-span-4 row-span-5" />
+        <GalleryImage src={lastHalloweenThree.url} alt="Halloween guests gathering around a table" className="col-span-4 row-span-7" />
+        <GalleryImage src={lastHalloweenFour.url} alt="A group of guests in Halloween face paint" className="col-span-5 row-span-5" />
+        <GalleryImage src={lastHalloweenFive.url} alt="Friends enjoying last year's Halloween crawl" className="col-span-3 row-span-5" />
         <p className="pointer-events-none absolute bottom-4 left-4 bg-halloween-bg/80 px-3 py-2 text-[9px] font-semibold tracking-[0.18em] text-halloween-ivory">BANGKOK · HALLOWEEN 2025</p>
       </div>
     </PageSection>
@@ -259,8 +262,8 @@ function NightFlowTimeline() {
         ))}
       </ol>
       <div className="mt-14 grid grid-cols-2 gap-2 lg:mt-24 lg:grid-cols-[1.3fr_0.7fr]">
-        <EditorialImage src={interiorImage.url} alt="Guests talking in a colorful Bangkok nightlife venue" className="aspect-[4/3] lg:aspect-[16/6]" />
-        <EditorialImage src={finaleImage.url} alt="Halloween finale atmosphere under red lights" className="aspect-[4/3] lg:aspect-[16/6]" />
+        <EditorialImage src={nightOne.url} alt="Guests checking in at the first Halloween venue" className="aspect-[4/3] lg:aspect-[16/6]" />
+        <EditorialImage src={nightTwo.url} alt="The Halloween group celebrating together under red lights" className="aspect-[4/3] lg:aspect-[16/6]" />
       </div>
     </PageSection>
   );
@@ -269,7 +272,7 @@ function NightFlowTimeline() {
 function SoloSection() {
   return (
     <PageSection className="border-y border-halloween-ivory/10 bg-halloween-surface/35" innerClassName="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-20">
-      <EditorialImage src={laughingImage.url} alt="Guests laughing together during a hosted social night" className="aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5]" position="object-[50%_38%]" />
+      <EditorialImage src={comeSoloImage.url} alt="Solo guests connecting with the Halloween group" className="aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5]" position="object-center" />
       <div>
         <Eyebrow>COME SOLO</Eyebrow>
         <h2 className="mt-4 font-display text-[40px] leading-[0.98] sm:text-5xl lg:text-[60px]">COMING ALONE? THAT’S NORMAL HERE.</h2>
@@ -301,7 +304,7 @@ function InclusionsSection() {
         <p className="mt-7 text-[15px] leading-relaxed text-halloween-muted">Confirmed guests join the event group for updates, introductions and final night details.</p>
         <p className="mt-4 text-[12px] leading-relaxed text-halloween-muted/80">Exact venue lineup and final meeting point will be shared with confirmed guests before the event.</p>
       </div>
-      <EditorialImage src={movingImage.url} alt="The hosted group moving between Bangkok nightlife stops" className="aspect-[4/5]" />
+      <EditorialImage src={whatsIncludedImage.url} alt="A host serving welcome shots at the Halloween event" className="aspect-[4/5]" />
     </PageSection>
   );
 }
