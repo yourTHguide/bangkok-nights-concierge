@@ -157,12 +157,12 @@ function EventHeader() {
 
 function HeroSection({ ctaRef }: { ctaRef: React.RefObject<HTMLAnchorElement | null> }) {
   return (
-    <section className="relative min-h-[930px] overflow-hidden pt-20 sm:min-h-[960px] lg:min-h-screen lg:pt-0">
+    <section className="relative min-h-[930px] overflow-hidden pt-20 sm:min-h-[960px] lg:h-screen lg:min-h-[820px] lg:max-h-[1040px] lg:pt-0">
       <div className="absolute inset-x-0 top-0 h-[54%] lg:inset-y-0 lg:left-auto lg:h-auto lg:w-[56%]">
         <img src={heroImage} alt="Masked guest in a candlelit Bangkok nightlife setting" width={1280} height={1600} fetchPriority="high" className="h-full w-full object-cover object-[50%_35%]" />
         <div className="absolute inset-0 bg-gradient-to-b from-halloween-bg/10 via-halloween-bg/10 to-halloween-bg lg:bg-gradient-to-r lg:from-halloween-bg lg:via-halloween-bg/20 lg:to-halloween-bg/5" />
       </div>
-      <div className="relative mx-auto flex min-h-[850px] max-w-[1240px] items-end px-5 pb-14 sm:px-6 lg:min-h-screen lg:items-center lg:pb-0">
+      <div className="relative mx-auto flex min-h-[850px] max-w-[1240px] items-end px-5 pb-14 sm:px-6 lg:h-full lg:min-h-0 lg:items-center lg:pb-0">
         <div className="w-full lg:max-w-[650px] lg:py-28">
           <p className="mb-5 flex items-center gap-3 text-[10px] font-semibold tracking-[0.24em] text-halloween-muted sm:text-[11px]"><span className="h-px w-9 bg-crimson" />BEST NIGHTLIFE THAILAND PRESENTS</p>
           <h1 className="font-display text-[48px] leading-[0.88] text-halloween-ivory sm:text-[62px] lg:text-[92px] xl:text-[104px]">
@@ -171,12 +171,12 @@ function HeroSection({ ctaRef }: { ctaRef: React.RefObject<HTMLAnchorElement | n
           <p className="mt-6 max-w-xl font-display text-[24px] leading-tight text-halloween-ivory sm:text-[28px]">Come in costume. Meet the crew. We’ll handle the night.</p>
           <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-halloween-muted sm:text-[17px]">A hosted Halloween route through Bangkok with social games, curated venues, transport and a final party stop — built so strangers become a group before the night really gets going.</p>
           <p className="mt-6 border-y border-halloween-ivory/10 py-4 text-[12px] font-medium tracking-[0.08em] text-halloween-ivory sm:text-[13px]">Back for Year Three · Saturday, October 31 · Bangkok</p>
-          <div className="mt-7 grid grid-cols-[minmax(0,1fr)_auto] items-end gap-5 sm:flex sm:items-end sm:gap-8">
+          <div className="mt-7 sm:flex sm:items-end sm:gap-8">
             <div>
               <p className="text-[10px] font-semibold tracking-[0.22em] text-crimson">PRESALE</p>
               <p className="font-display text-[64px] leading-none text-halloween-ivory sm:text-[76px]">฿990</p>
             </div>
-            <div className="pb-1 text-right sm:text-left">
+            <div className="mt-3 pb-1 sm:mt-0">
               <p className="text-[12px] text-halloween-muted sm:text-sm">Early Bird ฿1,200 · General Admission ฿1,500</p>
               <p className="mt-2 text-[11px] font-semibold tracking-[0.08em] text-halloween-ivory">First 30 presale spots only</p>
             </div>
@@ -203,7 +203,7 @@ function SocialProofGallery() {
         </div>
         <p className="mt-7 text-[11px] font-semibold tracking-[0.13em] text-halloween-ivory">See what last Halloween looked like ↓</p>
       </div>
-      <div className="grid h-[560px] grid-cols-12 grid-rows-12 gap-2 sm:h-[680px] lg:h-[610px]">
+      <div className="relative grid h-[560px] grid-cols-12 grid-rows-12 gap-2 sm:h-[680px] lg:h-[610px]">
         <GalleryImage src={cheersImage.url} alt="Guests laughing together over drinks" className="col-span-8 row-span-7" />
         <GalleryImage src={movingImage.url} alt="Group moving together through Bangkok at night" className="col-span-4 row-span-5" />
         <GalleryImage src={gamesImage.url} alt="Guests playing a social nightlife game" className="col-span-4 row-span-7" />
